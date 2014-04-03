@@ -1,0 +1,4 @@
+Feature: Accepting New Non-Profits
+As an Administrator
+So I can allow a Non-Profit to post volunteer opportunites
+I want to give a Non-Profit the ability to post

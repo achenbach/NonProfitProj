@@ -1,0 +1,4 @@
+Feature: Find Volunteer Opportunities
+As a Volunteer
+So I can find volunteer work
+I want to be able to search for volunteer opportunities that Non-Profits have posted
