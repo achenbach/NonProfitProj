@@ -1,15 +1,15 @@
 Feature: Find Volunteer Opportunities
-As a Volunteer
-So I can contribute to organizations 
-I want to be able to search for volunteer opportunities that Non-Profits have posted
+  As a Volunteer
+  So I can contribute to organizations
+  I want to be able to search for volunteer opportunities that Non-Profits have posted
 
 Scenario: Search for volunteer postings using Zip Code
 	Given I have open the website to the "search volunteer opportunities" page
 	When I type in a zip code and press "Search"
 	Then I should receive a list of volunteer opportunities within the zip code
-	When I press the Volunteer button
+	When I press the Volunteer button    # which opportunity button is being pressed
 	Then I should be on the "User Page"
-	And I should see the volunteer oppurtunity in the "Current Volunteer Jobs"
+	And I should see the volunteer opportunity in the "Current Volunteer Jobs"
 
 Scenario: Search for volunteer postings using an invalid Zip Code
 	Given I have open the website to the "search volunteer opportunities" page

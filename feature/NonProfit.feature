@@ -1,7 +1,7 @@
 Feature: Post a volunteer opportunity
-As a Non-Profit 
-So I can get new volunteers  
-I want to be able to post volunteer opportunites
+  As a Non-Profit
+  So I can get new volunteers
+  I want to be able to post volunteer opportunities
 
 Scenario: Post a volunteer opportunity
 	Given I am on the "Post Volunteer Opportunity" Page
