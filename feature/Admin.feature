@@ -5,12 +5,12 @@ Feature: Accepting New Non-Profits
 
 Scenario: Accept a new Non-Profit as a "Non-Profit User"
 	Given I am on the "Admin Page"
-  # don't we need to some data about which non-profit we are accepting
+  Then I should see a Non-Profit's "Name", "Phone Number", "Address", "Website", and "Email"
 	When I click the "Accept New Non-Profit" button
 	Then I should see "Non-Profit added" 
 
 Scenario: Decline a new Non-Profit as a "Non-Profit User"
 	Given I am on the "Admin Page"
-  # don't we need to some data about which non-profit we are accepting
+  Then I should see a Non-Profit's "Name", "Phone Number", "Address", "Website", and "Email"
 	When I click the "Decline Non-Profit" button
 	Then I should see "Non-Profit not added"

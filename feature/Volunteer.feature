@@ -7,7 +7,7 @@ Scenario: Search for volunteer postings using Zip Code
 	Given I have open the website to the "search volunteer opportunities" page
 	When I type in a zip code and press "Search"
 	Then I should receive a list of volunteer opportunities within the zip code
-	When I press the Volunteer button    # which opportunity button is being pressed
+	When I press the Volunteer button next to an available volunteer opportunity  
 	Then I should be on the "User Page"
 	And I should see the volunteer opportunity in the "Current Volunteer Jobs"
 
