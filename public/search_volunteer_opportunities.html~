@@ -1,0 +1,16 @@
+<html>
+<head></head>
+<body><h1>HOK</h1>
+<p>	Search Volunteer Opportunities</p>
+
+<table width="1000"> 
+<form>
+Zip Code: <input type="text" name="Zip Code"><br>
+
+</form> 
+</table>
+<form action='search_events.html'><tr><td><input type='submit' value='Search'></td></tr></form>
+<form action='search_events_invalid.html'><tr><td><input type='submit' value='Search Invalid'></td></tr></form>
+</body>
+</html>
+

@@ -15,6 +15,6 @@ Scenario: Post a volunteer opportunity with invalid date
 	Given I am on the "Post Volunteer Opportunity" page
 	When I press "Post New Job"
 	Then I should be on the "Post Volunteer Opportunity Input" page
-	When I type in a valid "Event Name", "Event Time", "Event Location", and "Event Length", but an invalid "Event Date"
+	When I type in a valid "Event Name", "Event Time", "Event Location", and "Event Length" but an invalid "Event Date"
 	Then I press "Submit Invalid"
 	Then I should see "Invalid Date"

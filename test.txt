@@ -1,0 +1,114 @@
+Feature: Accepting New Non-Profits
+  As an Administrator
+  So I can allow a Non-Profit to post volunteer opportunities
+  I want to give a Non-Profit the permissions to post
+
+  Scenario: Accept a new Non-Profit as a "Non-Profit User"                                     # features/Admin.feature:6
+    Given I am on the "Admin Page"                                                             # features/step_definitions/hok_steps.rb:1
+    Then I should see a Non-Profit's "Name", "Phone Number", "Address", "Website", and "Email" # features/step_definitions/hok_steps.rb:5
+    When I press "Accept New Non-Profit"                                                       # features/step_definitions/basic_steps.rb:30
+    Then I should see "Non-Profit added"                                                       # features/step_definitions/basic_steps.rb:5
+
+  Scenario: Decline a new Non-Profit as a "Non-Profit User"                                    # features/Admin.feature:12
+    Given I am on the "Admin Page"                                                             # features/step_definitions/hok_steps.rb:1
+    Then I should see a Non-Profit's "Name", "Phone Number", "Address", "Website", and "Email" # features/step_definitions/hok_steps.rb:5
+    When I press "Decline Non-Profit"                                                          # features/step_definitions/basic_steps.rb:30
+      Unable to find button "Decline Non-Profit" (Capybara::ElementNotFound)
+      ./features/step_definitions/basic_steps.rb:31:in `/^I press "(.*?)"$/'
+      features/Admin.feature:15:in `When I press "Decline Non-Profit"'
+    Then I should see "Non-Profit not added"                                                   # features/step_definitions/basic_steps.rb:5
+
+Feature: Post a volunteer opportunity
+  As a Non-Profit
+  So I can get new volunteers
+  I want to be able to post volunteer opportunities
+
+  Scenario: Post a volunteer opportunity                                                                  # features/NonProfit.feature:6
+    Given I am on the "Post Volunteer Opportunity" Page                                                   # features/NonProfit.feature:7
+    When I select "Post New Job"                                                                          # features/NonProfit.feature:8
+    Then I should be on the "Post Volunteer Opportunity Input" Page                                       # features/NonProfit.feature:9
+    When I type in a valid "Event Name", "Event Time", "Event Date", "Event Location", and "Event Length" # features/NonProfit.feature:10
+    Then I should see "Event Successfully Posted"                                                         # features/step_definitions/basic_steps.rb:5
+
+  Scenario: Post a volunteer opportunity with invalid date                                                               # features/NonProfit.feature:13
+    Given I am on the "Post Volunteer Opportunity" Page                                                                  # features/NonProfit.feature:14
+    When I select "Post New Job"                                                                                         # features/NonProfit.feature:15
+    Then I should be on the "Post Volunteer Opportunity Input" Page                                                      # features/NonProfit.feature:16
+    When I type in a valid "Event Name", "Event Time",  "Event Location", and "Event Length" but an invalid "Event Date" # features/NonProfit.feature:17
+    Then I should see "Invalid Date"                                                                                     # features/step_definitions/basic_steps.rb:5
+
+Feature: Find Volunteer Opportunities
+  As a Volunteer
+  So I can contribute to organizations
+  I want to be able to search for volunteer opportunities that Non-Profits have posted
+
+  Scenario: Search for volunteer postings using Zip Code                         # features/Volunteer.feature:6
+    Given I have open the website to the "search volunteer opportunities" page   # features/Volunteer.feature:7
+    When I type in a zip code and press "Search"                                 # features/Volunteer.feature:8
+    Then I should receive a list of volunteer opportunities within the zip code  # features/Volunteer.feature:9
+    When I press the Volunteer button next to an available volunteer opportunity # features/Volunteer.feature:10
+    Then I should be on the "User Page"                                          # features/Volunteer.feature:11
+    And I should see the volunteer opportunity in the "Current Volunteer Jobs"   # features/Volunteer.feature:12
+
+  Scenario: Search for volunteer postings using an invalid Zip Code            # features/Volunteer.feature:14
+    Given I have open the website to the "search volunteer opportunities" page # features/Volunteer.feature:15
+    When I type in an invalid zip code and press "Search"                      # features/Volunteer.feature:16
+    Then I should see "Invalid Zip Code: Try Again."                           # features/step_definitions/basic_steps.rb:5
+
+Failing Scenarios:
+cucumber features/Admin.feature:12 # Scenario: Decline a new Non-Profit as a "Non-Profit User"
+
+6 scenarios (1 failed, 4 undefined, 1 passed)
+27 steps (1 failed, 4 skipped, 16 undefined, 6 passed)
+0m2.182s
+
+You can implement step definitions for undefined steps with these snippets:
+
+Given(/^I am on the "(.*?)" Page$/) do |arg1|
+  pending # express the regexp above with the code you wish you had
+end
+
+When(/^I select "(.*?)"$/) do |arg1|
+  pending # express the regexp above with the code you wish you had
+end
+
+Then(/^I should be on the "(.*?)" Page$/) do |arg1|
+  pending # express the regexp above with the code you wish you had
+end
+
+When(/^I type in a valid "(.*?)", "(.*?)", "(.*?)", "(.*?)", and "(.*?)"$/) do |arg1, arg2, arg3, arg4, arg5|
+  pending # express the regexp above with the code you wish you had
+end
+
+When(/^I type in a valid "(.*?)", "(.*?)",  "(.*?)", and "(.*?)" but an invalid "(.*?)"$/) do |arg1, arg2, arg3, arg4, arg5|
+  pending # express the regexp above with the code you wish you had
+end
+
+Given(/^I have open the website to the "(.*?)" page$/) do |arg1|
+  pending # express the regexp above with the code you wish you had
+end
+
+When(/^I type in a zip code and press "(.*?)"$/) do |arg1|
+  pending # express the regexp above with the code you wish you had
+end
+
+Then(/^I should receive a list of volunteer opportunities within the zip code$/) do
+  pending # express the regexp above with the code you wish you had
+end
+
+When(/^I press the Volunteer button next to an available volunteer opportunity$/) do
+  pending # express the regexp above with the code you wish you had
+end
+
+Then(/^I should be on the "(.*?)"$/) do |arg1|
+  pending # express the regexp above with the code you wish you had
+end
+
+Then(/^I should see the volunteer opportunity in the "(.*?)"$/) do |arg1|
+  pending # express the regexp above with the code you wish you had
+end
+
+When(/^I type in an invalid zip code and press "(.*?)"$/) do |arg1|
+  pending # express the regexp above with the code you wish you had
+end
+

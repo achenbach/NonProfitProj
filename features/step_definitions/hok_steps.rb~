@@ -69,7 +69,7 @@ Then(/^I should see the volunteer opportunity in the "(.*?)"$/) do |arg1|
 end
 
 When(/^I type in an invalid zip code and press "(.*?)"$/) do |arg1|
-  click_button "Invalid Zip Code"
+  pending # express the regexp above with the code you wish you had
 end
 
 

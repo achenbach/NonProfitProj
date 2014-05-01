@@ -12,6 +12,6 @@ Scenario: Search for volunteer postings using Zip Code
 	And I should see the volunteer opportunity in the "Current Volunteer Jobs"
 
 Scenario: Search for volunteer postings using an invalid Zip Code
-	Given I have open the website to the "Search Volunteer Opportunities" page
+	Given I have open the website to the "search volunteer opportunities" page
 	When I type in an invalid zip code and press "Search"
 	Then I should see "Invalid Zip Code: Try Again."

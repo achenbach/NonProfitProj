@@ -1,0 +1,16 @@
+<html>
+<head></head>
+<body><h1>HOK</h1>
+<p>	Volunteer Opportunities in your area:</p>
+
+
+<table width="1000"> 
+<tr><th>Name</th><th>Phone Number</th><th>Address</th><th>Website</th><th>Email</th><th>Accept</th><th>
+Decline</th></tr>
+<form action='user_page.html'><tr><td>Parade</td><td>Noon</td><td>3/30/2015</td><td>Downtown</td><td>3 Hours</td><td><input type='submit' value='Volunteer'></td><td></td></tr></form>
+
+<form action='volunteer_invalid.html'><tr><td><input type='submit' value='Volunteer Invalid'></td></tr></form>
+</body>
+</html>
+<table width="1000"> 
+
